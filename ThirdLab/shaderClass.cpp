@@ -1,5 +1,4 @@
 #include"shaderClass.h"
-
 using namespace std;
 
 string get_file_contents(const char* filename)
@@ -20,8 +19,8 @@ string get_file_contents(const char* filename)
 
 Shader::Shader(const char* vertexFile, const char* fragmentFile)
 {
-	string vertexCode = get_file_contents(vertexFile);
-	string fragmentCode = get_file_contents(fragmentFile);
+	std::string vertexCode = get_file_contents(vertexFile);
+	std::string fragmentCode = get_file_contents(fragmentFile);
 
 	const char* vertexSource = vertexCode.c_str();
 	const char* fragmentSource = fragmentCode.c_str();
